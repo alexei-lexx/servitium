@@ -1,4 +1,3 @@
 inherit_gem:
   rubocop-movinga:
     - config/default.yml
-    - config/rails.yml
