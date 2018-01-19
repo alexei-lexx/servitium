@@ -1,10 +1,11 @@
 require "servitium/version"
-require "active_support"
 
 module Servitium
-  extend ActiveSupport::Concern
+  def self.included(base)
+    base.extend ClassMethods
+  end
 
-  class_methods do
+  module ClassMethods
     def call(*args)
       new(*args).call
     end
